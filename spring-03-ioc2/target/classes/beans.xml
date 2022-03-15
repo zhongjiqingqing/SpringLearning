@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--bean就是java对象 , 由Spring创建和管理-->
+  <bean id="user" class="com.kuang.pojo.User">
+      <property name="name" value="终极庆庆"/>
+  </bean>
+
+    <!-- 第一种根据index参数下标设置 -->
+    <bean id="userT" class="com.kuang.pojo.UserT">
+        <!-- index指构造方法 , 下标从0开始 -->
+        <constructor-arg index="0" value="kuangshen2"/>
+    </bean>
+    <alias name="userT" alias="userNew"/>
+</beans>
